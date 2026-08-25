@@ -23,3 +23,7 @@ main へ直接 push しない。変更は PR 経由。
 ## ステータス
 
 初期化のみ。実装はこれから。
+
+## Media_OS / Cursor Cloud Agent
+
+このリポジトリは Media_OS によって企画・タスク管理され、Cursor Cloud Agent によって実装される。
