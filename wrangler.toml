@@ -1,0 +1,13 @@
+name = "tv-mita"
+compatibility_date = "2026-08-26"
+pages_build_output_dir = "./site"
+
+# Serve site/ as static assets. Do not strip .html (GSC HTML-file verify
+# needs HTTP 200 at /google59eb4595440230ab.html, not a 308 to the
+# extensionless URL). Missing paths use 404.html, not index.html.
+# functions/_middleware.js is the Pages equivalent when pretty-URL 308
+# still runs in front of the static file.
+[assets]
+directory = "./site"
+html_handling = "none"
+not_found_handling = "404-page"

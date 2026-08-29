@@ -12,6 +12,10 @@ HTML / CSS のみ。CMS・ダッシュボード・認証・JS フレームワー
 - `index.html` — トップ（スタブ。ライブ SKU ができるまで商品ページへのリンクは置かない）
 - `p/index.html` — 商品コンバージョンページの空テンプレート（パス例: `/p/`）
 - `styles.css` — 共通スタイル（最小）
+- `google59eb4595440230ab.html` — Google Search Console HTML ファイル確認用（1行のみ。HTML で包まない）
+- `404.html` — 存在しないパスは 404。Cloudflare Pages はトップに `404.html` が無いと SPA 扱いし、欠けたパスへ homepage の `index.html` を 200 で返す
+
+Cloudflare Pages は `.html` を pretty URL として 308 することがある。GSC の HTML ファイル確認は `GET /google59eb4595440230ab.html` がリダイレクト無しの 200 である必要がある。`wrangler.toml` の `assets.html_handling = "none"` と `functions/_middleware.js` でそのパスを 200 のまま返す。SPA の `/* /index.html 200` は置かない。
 
 ## デプロイ
 
