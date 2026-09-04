@@ -131,7 +131,8 @@ h1 {
   text-decoration: none;
 }
 
-.item-card h2 {
+.item-card h2,
+.item-card h3 {
   font-size: 1.2rem;
   line-height: 1.4;
   margin: 0.25rem 0 0.5rem;
@@ -692,6 +693,18 @@ h1 {
 .official-source p { margin: .35rem 0 0; }
 .official-source a { color: var(--green); font-weight: 700; }
 .source-note { color: var(--muted); font-size: .78rem; }
+
+.program-feature-list { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .65rem; }
+.program-feature-list .program-feature { margin-top: 0; }
+.howto-list { margin: .9rem 0 0; padding-left: 1.2rem; }
+.howto-list li + li { margin-top: .55rem; }
+.related-links { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.related-links ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+.related-links a { color: var(--green); font-weight: 700; }
+.snapshot-note { margin: 0 0 .75rem; color: var(--muted); font-size: .85rem; }
+.spec-line { margin: 0 0 .75rem; font-size: .9rem; }
+.page-links { margin: 1.25rem 0 0; }
+.page-links a { color: var(--green); font-weight: 700; }
 
 @media (max-width: 42rem) {
   .program-hero { padding: 1.5rem 1.15rem; border-radius: 1.1rem; }
