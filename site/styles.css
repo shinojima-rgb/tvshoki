@@ -665,6 +665,11 @@ h1 {
 .program-hero--brunch {
   background: radial-gradient(circle at 88% 18%, rgba(38, 92, 72, .13), transparent 25%), linear-gradient(135deg, #fff0e5, #fffaf5 58%, #edf6f1);
 }
+.program-hero--matsuko {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(180, 92, 140, .14), transparent 26%),
+    linear-gradient(135deg, #fff0e5, #fffaf5 52%, #f6eaf3);
+}
 .next-date, .next-time, .program-feature, .program-guests, .program-hero-note { margin: 0; }
 .next-date time { display: flex; align-items: baseline; gap: .35rem; }
 .next-date strong { color: var(--accent); font-size: clamp(2.8rem, 9vw, 5rem); line-height: 1; letter-spacing: -.055em; }
@@ -678,6 +683,7 @@ h1 {
 .program-section { margin-top: clamp(2.5rem, 7vw, 4.5rem); }
 .program-section > h2 { margin: 0 0 .9rem; color: var(--ink); font-size: clamp(1.3rem, 3vw, 1.75rem); line-height: 1.4; }
 .program-latest-card { max-width: 40rem; margin-top: 0; }
+.program-latest-list { display: grid; gap: 1.25rem; }
 .card-summary { margin: .65rem 0 0; color: var(--muted); font-size: .9rem; }
 .program-guide { max-width: 48rem; padding: clamp(1.4rem, 4vw, 2.2rem); border: 1px solid var(--line); border-radius: 1.1rem; background: var(--paper); }
 .program-guide p:not(.section-kicker) { margin: .8rem 0 0; color: #46504b; }
