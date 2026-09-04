@@ -12,10 +12,32 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>テレビでみた｜サタプラなどテレビで紹介された商品をすぐ探せる</title>
-  <meta name="description" content="シューイチ、サタデープラス（サタプラ）など、テレビ番組で紹介された商品を放送日・番組名から探せます。">
+  <title>テレビでみた｜テレビで紹介された商品を探す</title>
+  <meta name="description" content="テレビ番組で紹介された商品を、番組名と放送日から探せます。サタデープラス（サタプラ）、王様のブランチ、大阪ほんわかテレビなどの紹介商品をまとめています。">
   <link rel="canonical" href="https://tv-mita.jp/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="テレビでみた｜テレビで紹介された商品を探す">
+  <meta property="og:description" content="テレビ番組で紹介された商品を、番組名と放送日から探せます。">
+  <meta property="og:url" content="https://tv-mita.jp/">
+  <meta property="og:image" content="https://tv-mita.jp/og/brand.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="テレビでみた｜番組と日付から紹介商品を探す">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="テレビでみた｜テレビで紹介された商品を探す">
+  <meta name="twitter:description" content="テレビ番組で紹介された商品を、番組名と放送日から探せます。">
+  <meta name="twitter:image" content="https://tv-mita.jp/og/brand.png">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://tv-mita.jp/#org","name":"テレビでみた","url":"https://tv-mita.jp/"},
+    {"@type":"WebSite","@id":"https://tv-mita.jp/#website","name":"テレビでみた","url":"https://tv-mita.jp/","description":"テレビで紹介された商品を、番組名と放送日から探すメディアです。","publisher":{"@id":"https://tv-mita.jp/#org"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"テレビでみたでは何が探せますか？","acceptedAnswer":{"@type":"Answer","text":"テレビ番組で紹介された商品を、番組名と放送日から探せます。確認できた商品だけを掲載しています。"}},
+      {"@type":"Question","name":"商品はどうやって探せばよいですか？","acceptedAnswer":{"@type":"Answer","text":"番組名か放送日が分かれば、トップの放送日カードからその日の一覧を開けます。コーナー名まで分かれば、各日付ページの商品一覧へ進んでください。"}}
+    ]}
+  ]}
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -30,11 +52,9 @@
       <h1 id="home-title">あの商品、<br><span>なんだっけ？</span></h1>
       <p class="lead">「この前テレビで見たのに、名前を忘れちゃった…」そんな商品を、放送日と番組名からすぐに探せます。</p>
       <nav class="program-nav" aria-label="番組から探す">
-        <a href="./satapla/">サタプラ</a>
-        <a href="./brunch/">王様のブランチ</a>
-        <a href="./shoichi/">シューイチ</a>
-        <a href="./jobtune/">ジョブチューン</a>
-        <a href="./matsuko/">マツコの知らない世界</a>
+        <a href="./2026-08-29/">サタプラ</a>
+        <a href="./2026-08-29/brunch/">王様のブランチ</a>
+        <a href="./2026-08-21/osaka-honwaka-benri-goods/">大阪ほんわかテレビ</a>
       </nav>
     </section>
 
@@ -47,14 +67,15 @@
         <p>放送日が新しい順</p>
       </div>
       <div class="home-grid">
-        <article class="home-card home-card--text">
+        <article class="home-card">
           <a href="./2026-08-29/">
-            <div class="home-card-placeholder" aria-hidden="true"><span>サタデープラス</span></div>
+            <img src="./og/2026-08-29.png" width="1200" height="630" alt="サタデープラス 8月29日 紹介商品">
             <div class="home-card-body">
               <p class="broadcast-date"><time datetime="2026-08-29"><strong>8月29日</strong><span>（土）放送</span></time></p>
-              <p class="home-card-program">サタデープラス</p>
-              <h3>番組で紹介された商品まとめ</h3>
-              <p class="home-card-link">商品を見る <span aria-hidden="true">→</span></p>
+              <p class="home-card-program">サタデープラス／王様のブランチ</p>
+              <h3>チーズハンバーグ・セリア</h3>
+              <p class="card-summary">サタプラのチーズハンバーグとセリア、ブランチの買い物の達人。</p>
+              <p class="home-card-link">この日の商品を見る <span aria-hidden="true">→</span></p>
             </div>
           </a>
         </article>
@@ -65,7 +86,8 @@
               <p class="broadcast-date"><time datetime="2026-08-21"><strong>8月21日</strong><span>（金）放送</span></time></p>
               <p class="home-card-program">大阪ほんわかテレビ</p>
               <h3>便利グッズBEST5</h3>
-              <p class="home-card-link">商品を見る <span aria-hidden="true">→</span></p>
+              <p class="card-summary">ハネぴた、シリコントレーなど、番組で紹介された便利グッズ。</p>
+              <p class="home-card-link">この日の商品を見る <span aria-hidden="true">→</span></p>
             </div>
           </a>
         </article>
@@ -76,7 +98,8 @@
               <p class="broadcast-date"><time datetime="2026-08-15"><strong>8月15日</strong><span>（土）放送</span></time></p>
               <p class="home-card-program">サタデープラス</p>
               <h3>レトルトポークカレー</h3>
-              <p class="home-card-link">商品を見る <span aria-hidden="true">→</span></p>
+              <p class="card-summary">ニシキヤ、無印、ハウスなど、紹介されたレトルトカレー。</p>
+              <p class="home-card-link">この日の商品を見る <span aria-hidden="true">→</span></p>
             </div>
           </a>
         </article>
@@ -87,7 +110,8 @@
               <p class="broadcast-date"><time datetime="2026-08-11"><strong>8月11日</strong><span>（火）放送</span></time></p>
               <p class="home-card-program">マツコの知らない世界</p>
               <h3>乾麺</h3>
-              <p class="home-card-link">商品を見る <span aria-hidden="true">→</span></p>
+              <p class="card-summary">番組で紹介された乾麺を、確認できた範囲でまとめています。</p>
+              <p class="home-card-link">この日の商品を見る <span aria-hidden="true">→</span></p>
             </div>
           </a>
         </article>
@@ -98,33 +122,30 @@
               <p class="broadcast-date"><time datetime="2026-06-23"><strong>6月23日</strong><span>（火）放送</span></time></p>
               <p class="home-card-program">マツコの知らない世界</p>
               <h3>冷凍パン</h3>
-              <p class="home-card-link">商品を見る <span aria-hidden="true">→</span></p>
+              <p class="card-summary">番組で紹介された冷凍パンを、確認できた範囲でまとめています。</p>
+              <p class="home-card-link">この日の商品を見る <span aria-hidden="true">→</span></p>
             </div>
           </a>
         </article>
       </div>
     </section>
 
-    <section class="home-section" aria-labelledby="products-heading">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">暮らしに役立つ</p>
-          <h2 id="products-heading">今週の注目商品</h2>
-        </div>
-      </div>
-      <article class="product-card">
-        <a href="./p/">
-          <div class="product-card-image"><img src="https://shop.r10s.jp/smilespoon/cabinet/09/7187909_1.jpg" alt="鉄板焼チーズインハンバーグ 1個入り 100g"></div>
-          <div class="product-card-body">
-            <p class="product-broadcast-date"><strong>8月29日</strong>（土）放送</p>
-            <p class="product-card-program">サタデープラスで紹介</p>
-            <p class="brand-name">日東ベスト / エーデルシェフ</p>
-            <h3>鉄板焼チーズインハンバーグ</h3>
-            <p class="product-card-price">347円</p>
-            <p class="home-card-link">詳しく見る <span aria-hidden="true">→</span></p>
-          </div>
-        </a>
-      </article>
+    <section class="home-section program-guide" aria-labelledby="howto-heading">
+      <p class="section-kicker">探し方</p>
+      <h2 id="howto-heading">番組名と放送日から探す</h2>
+      <p>商品名を忘れても、見た番組か放送日が分かればたどり着けます。上のカードは日付・番組名・テーマの順に揃えています。</p>
+      <ul class="howto-list">
+        <li><strong>番組名が分かるとき</strong> — サタプラなら日付カードの「サタデープラス」、ブランチなら「王様のブランチ」を開きます。</li>
+        <li><strong>放送日が分かるとき</strong> — 「8月29日」など、日付が大きいカードからその日の商品一覧へ進みます。</li>
+      </ul>
+    </section>
+
+    <section class="home-section" aria-labelledby="home-faq-heading">
+      <h2 id="home-faq-heading">よくある質問</h2>
+      <h3>どんな商品が載っていますか？</h3>
+      <p>テレビ番組で紹介された商品です。番組公式などで確認できたものだけを、放送日ごとにまとめています。</p>
+      <h3>購入リンクはありますか？</h3>
+      <p>各放送日の記事に、確認できた商品の販売ページへのリンクを置いています。トップページからは日付の一覧へ進んでください。</p>
     </section>
 
     <section class="editorial-profile" aria-labelledby="profile-heading">
