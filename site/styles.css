@@ -685,6 +685,8 @@ h1 {
 .program-primary-link { display: inline-flex; min-height: 48px; align-items: center; gap: .5rem; margin-top: 1.25rem; padding: .75rem 1rem; border-radius: .7rem; background: var(--accent); color: #fff; font-size: .9rem; font-weight: 800; text-decoration: none; }
 .program-section { margin-top: clamp(2.5rem, 7vw, 4.5rem); }
 .program-section > h2 { margin: 0 0 .9rem; color: var(--ink); font-size: clamp(1.3rem, 3vw, 1.75rem); line-height: 1.4; }
+.flash-product-list { max-width: 40rem; }
+.flash-product-list .item + .item { margin-top: 1.75rem; padding-top: 1.5rem; }
 .program-latest-card { max-width: 40rem; margin-top: 0; }
 .program-latest-list { display: grid; gap: 1.25rem; }
 .card-summary { margin: .65rem 0 0; color: var(--muted); font-size: .9rem; }
