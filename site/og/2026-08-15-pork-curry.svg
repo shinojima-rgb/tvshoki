@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#faf8f5"/>
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#e4dfd6" stroke-width="2"/>
+  <text x="600" y="108" text-anchor="middle" font-family="Hiragino Sans, Noto Sans JP, Noto Sans CJK JP, sans-serif" font-size="28" font-weight="500" fill="#666">テレビでみた</text>
+  <rect x="552" y="128" width="96" height="3" fill="#1a1a1a"/>
+  <text x="600" y="280" text-anchor="middle" font-family="Hiragino Sans, Noto Sans JP, Noto Sans CJK JP, sans-serif" font-size="96" font-weight="700" fill="#222">サタデープラス</text>
+  <text x="600" y="372" text-anchor="middle" font-family="Hiragino Sans, Noto Sans JP, Noto Sans CJK JP, sans-serif" font-size="56" font-weight="500" fill="#666">8月15日</text>
+  <text x="600" y="478" text-anchor="middle" font-family="Hiragino Sans, Noto Sans JP, Noto Sans CJK JP, sans-serif" font-size="84" font-weight="700" fill="#222">ポークカレー</text>
+</svg>
