@@ -12,8 +12,15 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>シューイチ 紹介された商品｜テレビでみた</title>
-  <meta name="description" content="シューイチで紹介された商品。">
+  <title>シューイチ 今日の商品・紹介されたお店｜テレビでみた</title>
+  <meta name="description" content="シューイチで紹介された商品やお店を、放送日から確認できます。次回放送分は放送前から準備し、確認できた情報だけを更新します。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://tv-mita.jp/shoichi/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="シューイチ 今日の商品・紹介されたお店">
+  <meta property="og:description" content="放送日ごとに、シューイチで紹介された商品やお店を確認できます。">
+  <meta property="og:url" content="https://tv-mita.jp/shoichi/">
+  <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="../styles.css">
   <script defer src="/analytics.js"></script>
 </head>
@@ -21,12 +28,21 @@
   <header class="site-header">
     <p class="brand"><a href="../">テレビでみた</a></p>
   </header>
-  <main>
-    <h1>シューイチ</h1>
-    <p class="lead">テレビで紹介された商品を放送日から探せます</p>
-    <article class="item-card">
-      <p>次の放送の商品を掲載します</p>
-    </article>
+  <main class="program-main">
+    <nav class="breadcrumbs" aria-label="パンくず"><a href="../">ホーム</a><span aria-hidden="true">›</span><span>シューイチ</span></nav>
+    <section class="program-hero" aria-labelledby="program-title">
+      <p class="hero-kicker">日本テレビ系</p>
+      <h1 id="program-title">シューイチ</h1>
+      <p class="program-feature">紹介された商品・お店を放送日から探す</p>
+      <p class="program-hero-note">商品名や店舗情報は、番組内容と公式情報を確認できたものだけを掲載します。</p>
+    </section>
+    <section class="program-section" aria-labelledby="next-title">
+      <p class="section-kicker">次回の放送</p>
+      <h2 id="next-title">9月6日（日）放送分</h2>
+      <p>明日の放送で紹介されるトレンド・グルメ・商品情報を、確認でき次第追記します。</p>
+      <a class="program-primary-link" href="../2026-09-06/shuichi/">9月6日放送のページを見る <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="program-section official-source"><h2>確認方法</h2><p>放送内容と公式情報を照合し、未確認の固有名詞・価格・販売先は推測で掲載しません。</p></section>
   </main>
   <footer class="site-footer">
     <p>テレビでみた</p>
