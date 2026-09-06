@@ -728,3 +728,15 @@ h1 {
   .preview-grid { grid-template-columns: 1fr; }
   .section-heading:has(.live-status) { align-items: flex-start; flex-direction: column; }
 }
+
+.article-hero-image {
+  margin: 1.25rem 0 0;
+}
+
+.article-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: .9rem;
+  border: 1px solid var(--line);
+}
