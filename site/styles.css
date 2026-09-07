@@ -740,3 +740,27 @@ h1 {
   border-radius: .9rem;
   border: 1px solid var(--line);
 }
+
+/* 複数ランキングを持つ回（2番勝負・サタデミー賞）のジャンル見出し */
+.rank-group {
+  margin: clamp(2.2rem, 6vw, 3.4rem) 0 1.1rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--ink);
+  color: var(--ink);
+  font-size: clamp(1.2rem, 2.8vw, 1.55rem);
+  line-height: 1.4;
+}
+
+/* 同じ日・同じ番組の記事への内部リンク */
+.related-articles ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.related-articles li + li {
+  margin-top: .5rem;
+}
+
+.related-articles p {
+  margin: .9rem 0 0;
+}
