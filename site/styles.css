@@ -764,3 +764,59 @@ h1 {
 .related-articles p {
   margin: .9rem 0 0;
 }
+
+/* 通販の販売単位が番組掲載と違うときの注記 */
+.buy-note {
+  margin: .6rem 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.65;
+}
+
+/* ランキング一覧表（横幅が足りない端末では表だけ横スクロールさせる） */
+.table-scroll {
+  overflow-x: auto;
+  margin: 1.5rem 0 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rank-table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: .92rem;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: .6rem .7rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.rank-table th {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.rank-table td:first-child {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-table td:nth-child(4),
+.rank-table td:nth-child(5) {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.criteria-list {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.criteria-list li + li {
+  margin-top: .35rem;
+}
