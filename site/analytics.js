@@ -44,6 +44,7 @@
       link_url: destination.href,
       link_domain: destination.hostname,
       affiliate_partner: partner,
+      rakuten_tracking_id: link.dataset.rakutenTrackingId || "unassigned",
       item_name: displayName,
       page_path: window.location.pathname,
       transport_type: "beacon"
