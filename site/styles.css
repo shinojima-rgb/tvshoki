@@ -820,3 +820,23 @@ h1 {
 .criteria-list li + li {
   margin-top: .35rem;
 }
+
+/* 放送前ページの出演者・視聴方法（公式で確認できた事実のみ） */
+.preview-meta {
+  margin: 1.4rem 0 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: .8rem;
+  background: var(--paper);
+}
+
+.preview-meta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+.preview-meta p + p {
+  margin-top: .6rem;
+}
