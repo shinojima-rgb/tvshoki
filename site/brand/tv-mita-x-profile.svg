@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" rx="224" fill="#faf8f5"/>
+  <circle cx="512" cy="512" r="424" fill="none" stroke="#222222" stroke-width="24"/>
+  <text x="512" y="604" text-anchor="middle"
+        font-family="Hiragino Sans, Noto Sans JP, Noto Sans CJK JP, sans-serif"
+        font-size="318" font-weight="700" letter-spacing="-22" fill="#222222">みた</text>
+  <rect x="414" y="690" width="196" height="18" rx="9" fill="#222222"/>
+</svg>
