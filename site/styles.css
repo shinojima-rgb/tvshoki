@@ -868,3 +868,15 @@ h1 {
   margin: .8rem 0 0;
   font-size: .88rem;
 }
+
+/* 放送中の速報（未確認候補） */
+.flash-live {
+  padding: clamp(1.2rem, 4vw, 1.8rem);
+  border: 2px solid var(--ink);
+  border-radius: 1rem;
+}
+
+.flash-live .eyebrow {
+  color: var(--muted);
+  font-weight: 600;
+}
