@@ -840,3 +840,31 @@ h1 {
 .preview-meta p + p {
   margin-top: .6rem;
 }
+
+/* 記事冒頭の目次と結果一覧 */
+.page-toc {
+  padding: clamp(1.2rem, 4vw, 1.8rem);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--paper);
+}
+
+.toc-list {
+  margin: 0 0 1.6rem;
+  padding-left: 1.4rem;
+}
+
+.toc-list li + li {
+  margin-top: .45rem;
+}
+
+.toc-result-heading {
+  margin: 0 0 .2rem;
+  font-size: 1.05rem;
+}
+
+/* フッターの編集方針リンク */
+.footer-nav {
+  margin: .8rem 0 0;
+  font-size: .88rem;
+}
