@@ -668,6 +668,9 @@ h1 {
 .program-hero--doyounani {
   background: radial-gradient(circle at 88% 16%, rgba(244, 188, 71, .25), transparent 28%), linear-gradient(135deg, #fff1e5, #fffaf4 55%, #edf7ee);
 }
+.program-hero--hiruobi {
+  background: radial-gradient(circle at 12% 20%, rgba(96, 165, 214, .22), transparent 30%), linear-gradient(135deg, #eef5fb, #fffaf4 60%, #fdf0e6);
+}
 .program-hero--matsuko {
   background:
     radial-gradient(circle at 88% 16%, rgba(180, 92, 140, .14), transparent 26%),
