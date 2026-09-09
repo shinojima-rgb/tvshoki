@@ -880,3 +880,26 @@ h1 {
   color: var(--muted);
   font-weight: 600;
 }
+
+/* 商品別購入ガイド: 冒頭の回答ブロックと仕様表 */
+.answer-first {
+  padding: clamp(1.2rem, 4vw, 1.8rem);
+  border: 2px solid var(--ink);
+  border-radius: 1rem;
+  background: var(--paper);
+}
+
+.answer-first > h2 {
+  margin-top: 0;
+}
+
+.spec-table th {
+  width: 9rem;
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.spec-table td {
+  white-space: normal;
+}
