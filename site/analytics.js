@@ -30,7 +30,8 @@
     var articleRoot = link.closest("[data-article-id]") || document.querySelector("[data-article-id]");
     var itemName = item && item.querySelector("h1, h2, h3");
     var displayName = itemName ? itemName.textContent.trim() : link.textContent.trim();
-    var partner = isRakuten ? "rakuten" : destination.hostname;
+    // 明示された data-affiliate-partner を最優先。無い場合のみ遷移先から推定する
+    var partner = link.dataset.affiliatePartner || (isRakuten ? "rakuten" : destination.hostname);
     var articleId = link.dataset.articleId || (articleRoot && articleRoot.dataset.articleId) || canonicalArticleId();
     var articleVersion = Number(link.dataset.articleVersion || (articleRoot && articleRoot.dataset.articleVersion) || 1);
     var productId = link.dataset.productId || link.dataset.productName || displayName || destination.href;
@@ -45,6 +46,7 @@
       link_domain: destination.hostname,
       affiliate_partner: partner,
       rakuten_tracking_id: link.dataset.rakutenTrackingId || "unassigned",
+      affiliate_program_id: link.dataset.affiliateProgramId || "unassigned",
       item_name: displayName,
       page_path: window.location.pathname,
       transport_type: "beacon"

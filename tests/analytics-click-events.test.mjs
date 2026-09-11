@@ -141,6 +141,44 @@ for (const page of PAGES) {
   check("セレクタ外のリンクは0件", runClick(bare, "").length, 0);
 }
 
+// 複数ASP: data-affiliate-partner の優先と affiliate_program_id の保存
+{
+  console.log("\n■ 複数ASP（ValueCommerce）");
+  const html = readFileSync(new URL("../site/2026-09-08/matsuko/index.html", import.meta.url), "utf8");
+  const root = articleRootOf(html);
+  const vc = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)]
+    .map((m) => {
+      const attrs = {};
+      for (const a of m[1].matchAll(/([a-zA-Z-]+)="([^"]*)"/g)) attrs[a[1]] = a[2];
+      return { attrs, text: m[2].replace(/<[^>]+>/g, "").trim() };
+    })
+    .filter((l) => l.attrs["data-affiliate-partner"] === "valuecommerce");
+
+  check("ValueCommerceリンクが1本", vc.length, 1);
+  const link = vc[0];
+  const outbound = runClick(makeElement(link, root), html).filter((e) => e.name === "outbound_product_click");
+  check("outbound_product_click が1回", outbound.length, 1);
+  check("affiliate_partner は属性優先で valuecommerce", outbound[0].params.affiliate_partner, "valuecommerce");
+  check("affiliate_program_id を保存", outbound[0].params.affiliate_program_id, "2147651");
+  check("product_id", outbound[0].params.product_id, "tabelog-frufull-akasaka-13155288");
+  check("link_position", outbound[0].params.link_position, "restaurant-card");
+  check("article_version は2", outbound[0].params.article_version, 2);
+  check("rakuten_tracking_id は unassigned", outbound[0].params.rakuten_tracking_id, "unassigned");
+  check("リンクテキストに『予約』を含む", link.text.includes("予約"), true);
+  check("計測ピクセルが同じリンク内にある", /ad\.jp\.ap\.valuecommerce\.com\/servlet\/gifbanner/.test(html), true);
+}
+
+// 楽天リンクは属性が無くてもホストから rakuten と判定され続ける（回帰ガード）
+{
+  console.log("\n■ 回帰ガード: 楽天は従来どおり");
+  const html = readFileSync(new URL("../site/p/sunsun-sponge-black/index.html", import.meta.url), "utf8");
+  const root = articleRootOf(html);
+  const link = parseLinks(html)[0];
+  const outbound = runClick(makeElement(link, root), html).filter((e) => e.name === "outbound_product_click");
+  check("affiliate_partner は rakuten", outbound[0].params.affiliate_partner, "rakuten");
+  check("affiliate_program_id 未指定は unassigned", outbound[0].params.affiliate_program_id, "unassigned");
+}
+
 // 合算禁止の明示
 {
   console.log("\n■ 合算禁止の確認");
