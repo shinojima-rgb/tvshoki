@@ -725,6 +725,7 @@ h1 {
 .ev-dl > div { display: grid; grid-template-columns: 5.5em 1fr; gap: 10px; align-items: baseline; }
 .ev-dl dt { font-size: .76rem; color: var(--muted); }
 .ev-dl dd { margin: 0; font-size: .9rem; line-height: 1.5; }
+.ev-note { margin: 10px 0 0; font-size: .78rem; line-height: 1.55; color: var(--muted); }
 .ev-link { margin: 10px 0 0; }
 .ev-link a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
 @media (max-width: 420px) { .ev-dl > div { grid-template-columns: 1fr; gap: 2px; } }
