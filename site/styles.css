@@ -708,6 +708,9 @@ h1 {
 .house-notice { color: var(--muted); font-size: .75rem; margin: 0 0 10px; }
 .reserve-note { font-size: .82rem; margin: 10px 0 6px; }
 .candidate-list { list-style: none; margin: 14px 0 10px; padding: 0; display: grid; gap: 8px; }
+.shop-area { margin: 20px 0 4px; font-size: .82rem; letter-spacing: .04em; color: var(--muted); font-weight: 700; }
+.preview-list { margin: 10px 0; padding-left: 1.2em; }
+.preview-list li { margin: 4px 0; line-height: 1.6; }
 .ev-cards { display: grid; gap: 12px; margin: 14px 0 10px; }
 .ev-card { background: #fff; border: 1px solid #ead9ca; border-radius: 12px; padding: 14px 16px; }
 .ev-card h3 { margin: 0 0 8px; font-size: 1.02rem; line-height: 1.35; }
