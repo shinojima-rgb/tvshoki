@@ -708,6 +708,14 @@ h1 {
 .house-notice { color: var(--muted); font-size: .75rem; margin: 0 0 10px; }
 .reserve-note { font-size: .82rem; margin: 10px 0 6px; }
 .candidate-list { list-style: none; margin: 14px 0 10px; padding: 0; display: grid; gap: 8px; }
+.buy-card { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: start; }
+.buy-card-img { width: 120px; height: 120px; object-fit: contain; background: #fff; border-radius: 8px; }
+.buy-card-body { display: grid; gap: 4px; }
+.buy-card-links { margin: 2px 0 0; font-size: .78rem; }
+.buy-note { margin: 4px 0 0; font-size: .78rem; color: var(--muted); }
+.buy-cta { margin: 8px 0 0; }
+.buy-cta .buy { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 10px; background: #a33b1e; color: #fff; font-weight: 700; text-decoration: none; }
+@media (max-width: 420px) { .buy-card { grid-template-columns: 84px 1fr; } .buy-card-img { width: 84px; height: 84px; } }
 .poll-list { list-style: none; margin: 14px 0 10px; padding: 0; display: grid; gap: 8px; counter-reset: poll; }
 .poll-list li { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: baseline; padding: 10px 12px; background: #fff; border: 1px solid #ead9ca; border-radius: 10px; }
 .poll-rank { font-weight: 700; color: #a33b1e; }
