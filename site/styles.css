@@ -714,6 +714,7 @@ h1 {
 .ev-cards { display: grid; gap: 12px; margin: 14px 0 10px; }
 .ev-card { background: #fff; border: 1px solid #ead9ca; border-radius: 12px; padding: 14px 16px; }
 .ev-card h3 { margin: 0 0 8px; font-size: 1.02rem; line-height: 1.35; }
+.ev-preview { margin: 0 0 10px; font-size: .86rem; line-height: 1.6; color: var(--muted); }
 .ev-dl { margin: 0; display: grid; gap: 6px; }
 .ev-dl > div { display: grid; grid-template-columns: 5.5em 1fr; gap: 10px; align-items: baseline; }
 .ev-dl dt { font-size: .76rem; color: var(--muted); }
