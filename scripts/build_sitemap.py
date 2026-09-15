@@ -5,6 +5,11 @@ lastmod の決め方:
   1. 中央キュー queue/jobs/*.json の publication.published_at（同一URLに複数あれば最大）
   2. git がそのファイルを最後に変更したコミットの author date
   → 両方あれば「新しい方」を採る。1 は公開記録の正本、2 は記録外の実変更を取りこぼさないための下限。
+
+実行タイミング: 記事を変更したマージの「あと」に本番ブランチ上で走らせる。
+squash マージは author date を付け替えるため、ブランチ上で生成した lastmod は
+マージ後の実時刻より数分だけ過去を指す。実際より古い lastmod は再クロールの
+優先度を下げるので、マージ後にもう一度回して合わせる。
 """
 import glob, io, json, os, re, subprocess, sys
 from datetime import datetime, timedelta, timezone
