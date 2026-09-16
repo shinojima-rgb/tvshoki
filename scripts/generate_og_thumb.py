@@ -61,10 +61,62 @@ def png_dimensions(path: Path) -> tuple[int, int]:
     return width, height
 
 
+TOPIC_MAX_WIDTH = 1040        # 枠(1120)の内側に左右40pxずつ余白を残す
+TOPIC_MAX_SIZE = 84
+TOPIC_MIN_SIZE = 44
+
+
+def _text_width(text: str, size: int) -> float:
+    """全角はほぼ字送り1em、半角は約0.55em として見積もる。"""
+    return sum(1.0 if ord(char) > 0x2E7F else 0.55 for char in text) * size
+
+
+def _split_two_lines(topic: str, size: int, force: bool = False) -> list[str]:
+    """意味の切れ目で2行に割る。`force` のときは幅に収まらなくても切れ目を優先する。
+
+    幅で妥協して真ん中で割ると「feuquiage」が「feu / quiage」になり、読めない札になる。
+    """
+    for separator in ("（", "(", "・", "／", "/", " "):
+        cut = topic.rfind(separator, 0, len(topic) * 2 // 3 + 1)
+        if cut <= 0:
+            continue
+        head, tail = topic[:cut], topic[cut:].lstrip("（(")
+        if force or max(_text_width(head, size), _text_width(tail, size)) <= TOPIC_MAX_WIDTH:
+            return [head, tail]
+    middle = len(topic) // 2
+    return [topic[:middle], topic[middle:]]
+
+
+def fit_topic(topic: str) -> tuple[list[str], int]:
+    """収まる字の大きさと行を返す。1行で入らなければ2行、それでも入らなければ詰める。"""
+    topic = " ".join(str(topic or "").split())
+    for size in range(TOPIC_MAX_SIZE, TOPIC_MIN_SIZE - 1, -4):
+        if _text_width(topic, size) <= TOPIC_MAX_WIDTH:
+            return [topic], size
+    for size in range(TOPIC_MAX_SIZE - 16, TOPIC_MIN_SIZE - 1, -4):
+        lines = _split_two_lines(topic, size)
+        if all(_text_width(line, size) <= TOPIC_MAX_WIDTH for line in lines):
+            return lines, size
+    size = TOPIC_MIN_SIZE
+    trimmed = []
+    for line in _split_two_lines(topic, size, force=True):
+        original = line
+        while line and _text_width(line + "…", size) > TOPIC_MAX_WIDTH:
+            line = line[:-1]
+        trimmed.append(line if line == original else line + "…")
+    return trimmed, size
+
+
 def svg_markup(program: str, date: str, topic: str) -> str:
     program_xml = escape(program)
     date_xml = escape(date)
-    topic_xml = escape(topic)
+    topic_lines, topic_size = fit_topic(topic)
+    # 1行なら従来と同じ位置。2行は日付(baseline 372)の下から始めて枠(590)に収める。
+    baselines = [478] if len(topic_lines) == 1 else [430, 430 + topic_size + 12]
+    topic_xml = "\n  ".join(
+        f'<text x="600" y="{y}" text-anchor="middle" font-family="{FONT_STACK}"'
+        f' font-size="{topic_size}" font-weight="700" fill="{INK}">{escape(line)}</text>'
+        for line, y in zip(topic_lines, baselines))
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
   <rect width="{WIDTH}" height="{HEIGHT}" fill="{BG}"/>
@@ -73,7 +125,7 @@ def svg_markup(program: str, date: str, topic: str) -> str:
   <rect x="552" y="128" width="96" height="3" fill="{RULE}"/>
   <text x="600" y="280" text-anchor="middle" font-family="{FONT_STACK}" font-size="96" font-weight="700" fill="{INK}">{program_xml}</text>
   <text x="600" y="372" text-anchor="middle" font-family="{FONT_STACK}" font-size="56" font-weight="500" fill="{MUTED}">{date_xml}</text>
-  <text x="600" y="478" text-anchor="middle" font-family="{FONT_STACK}" font-size="84" font-weight="700" fill="{INK}">{topic_xml}</text>
+  {topic_xml}
 </svg>
 """
 
@@ -100,7 +152,10 @@ def rasterize_with_pillow(png_path: Path, program: str, date: str, topic: str) -
     draw.rectangle((552, 128, 648, 131), fill=RULE)
     centered(program, 178, 96, INK)
     centered(date, 318, 56, MUTED)
-    centered(topic, 390, 84, INK)
+    topic_lines, topic_size = fit_topic(topic)
+    top = 390 if len(topic_lines) == 1 else 386
+    for index, line in enumerate(topic_lines):
+        centered(line, top + index * (topic_size + 12), topic_size, INK)
     image.save(png_path, format="PNG")
 
 
