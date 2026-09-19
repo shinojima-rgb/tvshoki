@@ -952,3 +952,120 @@ h1 {
 .spec-table td {
   white-space: normal;
 }
+
+/* Answer-first fold for confirmed ranking pages */
+.program-hero--answer {
+  padding: 1.15rem 1.25rem;
+}
+.program-hero--answer .hero-kicker {
+  margin: 0;
+}
+.program-hero--answer h1 {
+  margin-top: 0.45rem;
+  font-size: clamp(1.35rem, 3.2vw, 2.05rem);
+  line-height: 1.35;
+}
+.program-hero--answer .broadcast-line {
+  margin: 0.45rem 0 0;
+  color: var(--green);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+.program-hero--answer .program-feature {
+  margin-top: 0.55rem;
+}
+.program-hero--answer .program-hero-note {
+  margin-top: 0.5rem;
+}
+.program-section.answer-stack {
+  margin-top: 1.15rem;
+}
+.winner-answer .flash-product-list {
+  max-width: none;
+}
+.winner-answer .item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 0.35rem 1.1rem;
+  align-items: start;
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--paper);
+}
+.winner-answer .item .item-image {
+  grid-column: 1;
+  grid-row: 1 / span 6;
+  margin: 0;
+}
+.winner-answer .item .eyebrow,
+.winner-answer .item .brand-name,
+.winner-answer .item h3,
+.winner-answer .item .buy-note,
+.winner-answer .item .cta-wrap {
+  grid-column: 2;
+}
+.winner-answer .item .brand-name {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.winner-answer .item h3 {
+  margin: 0.15rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.dept-winner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: none;
+}
+.dept-winner-grid .item {
+  margin: 0;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--paper);
+}
+.dept-winner-grid .item + .item {
+  margin-top: 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+.dept-winner-grid .item-image {
+  margin: 0.35rem 0 0.5rem;
+}
+.dept-winner-grid .item-image img {
+  width: 96px;
+  max-width: 96px;
+  height: 96px;
+}
+.dept-winner-grid h3 {
+  margin: 0.15rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+@media (min-width: 56rem) {
+  .dept-winner-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 42rem) {
+  .program-hero--answer {
+    padding: 1.05rem 1rem;
+  }
+  .winner-answer .item {
+    grid-template-columns: 96px minmax(0, 1fr);
+    padding: 0.85rem 0.9rem;
+  }
+  .winner-answer .item-image img {
+    width: 96px;
+    max-width: 96px;
+    height: 96px;
+  }
+  .dept-winner-grid {
+    grid-template-columns: 1fr;
+  }
+}
