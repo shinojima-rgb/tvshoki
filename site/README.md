@@ -10,7 +10,7 @@
 HTML / CSS のみ。CMS・ダッシュボード・認証・JS フレームワークは使わない。
 
 - `index.html` — トップ（スタブ。ライブ SKU ができるまで商品ページへのリンクは置かない）
-- `p/index.html` — カテゴリランキング記事のハブ（`/p/`）。パイロットは `/p/ketchup/`
+- `p/index.html` — カテゴリランキング記事のハブ（`/p/`）。カテゴリ記事は `/p/ketchup/` `/p/canele/`
 - `p/README.md` — `/p/<category-slug>/` の再利用テンプレート（番組総合1位ページではない）
 - `p/<product-slug>/` — 既存の商品購入ガイド
 - `styles.css` — 共通スタイル（最小）。`.item-card.og-card img` は 1200×630 OG サムネ用（140px 商品クロップではない）
