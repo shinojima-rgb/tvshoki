@@ -10,7 +10,9 @@
 HTML / CSS のみ。CMS・ダッシュボード・認証・JS フレームワークは使わない。
 
 - `index.html` — トップ（スタブ。ライブ SKU ができるまで商品ページへのリンクは置かない）
-- `p/index.html` — 商品コンバージョンページの空テンプレート（パス例: `/p/`）
+- `p/index.html` — カテゴリランキング記事のハブ（`/p/`）。パイロットは `/p/ketchup/`
+- `p/README.md` — `/p/<category-slug>/` の再利用テンプレート（番組総合1位ページではない）
+- `p/<product-slug>/` — 既存の商品購入ガイド
 - `styles.css` — 共通スタイル（最小）。`.item-card.og-card img` は 1200×630 OG サムネ用（140px 商品クロップではない）
 - `og/` — 速報 OG サムネ（SVG ソース + 1200×630 PNG）。生成は `scripts/generate_og_thumb.py`（`og/README.md`）
 - `robots.txt` — Allow `/` for all user-agents. `Sitemap: https://tv-mita.jp/sitemap.xml`. Do not Disallow Googlebot or hide `/` `/p/` `/2026-08-29/`
