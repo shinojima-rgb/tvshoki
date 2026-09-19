@@ -954,67 +954,72 @@ h1 {
 }
 
 /* Answer-first fold for confirmed ranking pages */
+.answer-page .site-header {
+  padding-top: 0.55rem;
+  padding-bottom: 0.4rem;
+}
+.answer-page .breadcrumbs {
+  margin-bottom: 0.45rem;
+}
 .program-hero--answer {
-  padding: 1.15rem 1.25rem;
+  padding: 0.85rem 1rem 1rem;
 }
 .program-hero--answer .hero-kicker {
   margin: 0;
 }
 .program-hero--answer h1 {
-  margin-top: 0.45rem;
-  font-size: clamp(1.35rem, 3.2vw, 2.05rem);
-  line-height: 1.35;
+  margin-top: 0.3rem;
+  font-size: clamp(1.2rem, 2.7vw, 1.7rem);
+  line-height: 1.3;
 }
 .program-hero--answer .broadcast-line {
-  margin: 0.45rem 0 0;
+  margin: 0.35rem 0 0;
   color: var(--green);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 800;
 }
-.program-hero--answer .program-feature {
-  margin-top: 0.55rem;
+.program-hero--answer .house-notice {
+  margin: 0.4rem 0 0;
 }
-.program-hero--answer .program-hero-note {
-  margin-top: 0.5rem;
+.program-hero--answer .winner-atf-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 0.15rem 0.9rem;
+  align-items: start;
+  margin: 0.7rem 0 0;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--paper);
+}
+.program-hero--answer .winner-atf-card .item-image {
+  grid-column: 1;
+  grid-row: 1 / span 5;
+  margin: 0;
+}
+.program-hero--answer .winner-atf-card .item-image img {
+  width: 96px;
+  max-width: 96px;
+  height: 96px;
+}
+.program-hero--answer .winner-atf-card .eyebrow,
+.program-hero--answer .winner-atf-card h2,
+.program-hero--answer .winner-atf-card .buy-note,
+.program-hero--answer .winner-atf-card .cta-wrap {
+  grid-column: 2;
+}
+.program-hero--answer .winner-atf-card h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+.program-hero--answer .winner-atf-card .cta {
+  min-height: 40px;
+  padding: 0.45rem 0.9rem;
 }
 .program-section.answer-stack {
   margin-top: 1.15rem;
-}
-.winner-answer .flash-product-list {
-  max-width: none;
-}
-.winner-answer .item {
-  display: grid;
-  grid-template-columns: 140px minmax(0, 1fr);
-  gap: 0.35rem 1.1rem;
-  align-items: start;
-  margin: 0;
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  background: var(--paper);
-}
-.winner-answer .item .item-image {
-  grid-column: 1;
-  grid-row: 1 / span 6;
-  margin: 0;
-}
-.winner-answer .item .eyebrow,
-.winner-answer .item .brand-name,
-.winner-answer .item h3,
-.winner-answer .item .buy-note,
-.winner-answer .item .cta-wrap {
-  grid-column: 2;
-}
-.winner-answer .item .brand-name {
-  color: var(--ink);
-  font-size: 1.05rem;
-  font-weight: 800;
-}
-.winner-answer .item h3 {
-  margin: 0.15rem 0 0;
-  font-size: 0.95rem;
-  line-height: 1.45;
 }
 .dept-winner-grid {
   display: grid;
@@ -1054,16 +1059,15 @@ h1 {
 }
 @media (max-width: 42rem) {
   .program-hero--answer {
-    padding: 1.05rem 1rem;
+    padding: 0.8rem 0.85rem 0.9rem;
   }
-  .winner-answer .item {
-    grid-template-columns: 96px minmax(0, 1fr);
-    padding: 0.85rem 0.9rem;
+  .program-hero--answer .winner-atf-card {
+    grid-template-columns: 72px minmax(0, 1fr);
   }
-  .winner-answer .item-image img {
-    width: 96px;
-    max-width: 96px;
-    height: 96px;
+  .program-hero--answer .winner-atf-card .item-image img {
+    width: 72px;
+    max-width: 72px;
+    height: 72px;
   }
   .dept-winner-grid {
     grid-template-columns: 1fr;
