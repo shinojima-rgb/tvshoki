@@ -2,21 +2,24 @@
 
 楽天カテゴリ寄りの通販整理記事。番組の総合1位ページではない。
 
-task_id: `web-rakuten-category-rank-pilot-20260919`
+task_id: `web-rakuten-category-rank-pilot-20260919`（ケチャップ）／ `web-rakuten-category-rank-canele-20260919`（カヌレ）
 
 ## URL
 
 | 種類 | パス | 例 |
 |---|---|---|
 | ハブ | `/p/` | カテゴリ記事の入口 |
-| カテゴリランキング | `/p/<category-slug>/` | `/p/ketchup/` |
+| カテゴリランキング | `/p/<category-slug>/` | `/p/ketchup/` `/p/canele/` |
 | 商品購入ガイド（既存） | `/p/<product-slug>/` | `/p/sunsun-sponge-black/` |
 
 `/satapla/<theme>/` は放送回横断の番組まとめ（独自ランキングを作らない）。カテゴリの売れ筋整理は `/p/<category-slug>/` に置く。
 
 ## パイロット
 
-1本だけ: [`/p/ketchup/`](ketchup/)（ケチャップ）。既存アフィリンクが最も多い食・キッチン日用品。
+1. [`/p/ketchup/`](ketchup/)（ケチャップ）
+2. [`/p/canele/`](canele/)（カヌレ。マツコの知らない世界 2026-09-15）
+
+キッチンスポンジ／ラップのカテゴリページは Owner lock のため作らない。
 
 ## 必須構成
 
